@@ -244,7 +244,7 @@ export default (api: IApi) => {
 
   // force to disable auto CSSModules
   api.modifyBabelPresetOpts((memo) => {
-    delete memo.pluginAutoCSSModules;
+    // delete memo.pluginAutoCSSModules;
 
     return memo;
   });
