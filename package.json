@@ -1,6 +1,6 @@
 {
   "name": "dumi-cm",
-  "version": "2.2.17",
+  "version": "2.2.18",
   "description": "📖 Documentation Generator of React Component",
   "keywords": [
     "generator",
@@ -35,11 +35,10 @@
     "plugin-utils.d.ts"
   ],
   "scripts": {
-    "build": "father build && npm run cp",
+    "build": "father build && npm run build:crates",
     "build:crates": "cargo build --target wasm32-wasi -r --out-dir compiled/crates -Z unstable-options",
     "build:deps": "node scripts/pre-bundle-worker.js && father prebundle",
     "build:suites": "pnpm run --filter=\"./suites/**\" build",
-    "cp": "cp -r crates/crates compiled",
     "dev": "father dev",
     "docs:build": "node ./bin/dumi.js build",
     "docs:dev": "node ./bin/dumi.js dev",
