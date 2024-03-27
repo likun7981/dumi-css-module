@@ -48,7 +48,7 @@
     "lint": "npm run lint:es && npm run lint:css",
     "lint:css": "stylelint \"{src,test}/**/*.{css,less}\"",
     "lint:es": "eslint \"{src,test}/**/*.{js,jsx,ts,tsx}\"",
-    "prepare": "husky install && npm run build && npm run build:suites && node ./bin/dumi.js setup && npm run docs:sync",
+    "prepare": "husky install && npm run build && npm run build:suites",
     "prepublishOnly": "npm run build",
     "test": "vitest",
     "vercel:build": "npm run docs:build",
